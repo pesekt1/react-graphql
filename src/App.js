@@ -2,7 +2,7 @@ import React from "react";
 import { request, gql } from "graphql-request";
 import { useQuery } from "react-query";
 
-const endpoint = "http://localhost:5551/apis/graphql/";
+const endpoint = process.env.REACT_APP_API_URL;
 const AUTHORS_QUERY = gql`
   {
     findAllAuthors {
